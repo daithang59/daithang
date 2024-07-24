@@ -1,0 +1,57 @@
+@use "../abstracts/" as abs;
+
+.topbar {
+  padding: 24px 56px;
+  background-color: white;
+  @include abs.flexBox(center, space-between);
+  &-right {
+    @include abs.flexBox(center, false, 24px);
+    & > * {
+      flex-shrink: 0;
+    }
+  }
+  @include abs.screenMaxWidth(1279.98px){
+    @include abs.flexBox(center, flex-end, null,null);
+  }
+  &-action{
+    @include abs.screenMaxWidth(1279.98px){
+      display: none;
+    }
+  }
+}
+.button-upload {
+  height: 48px;
+  --gap: 6px;
+  --p: 0px 16px;
+  @include abs.screenMaxWidth(1279.98px){
+    display: none;
+  }
+}
+.profile {
+  display: block;
+  @include abs.size(48px);
+  img {
+    @include abs.rounded("rounded-full");
+    @include abs.imgCover();
+  }
+}
+.search {
+  padding: 12px 20px;
+  @include abs.flexBox(center, false, 12px);
+  @include abs.bg(abs.$gray-natural2);
+  @include abs.rounded("rounded-xl");
+  flex: 0 1 360px;
+  &-input {
+    flex: 1;
+    @include abs.bg(transparent);
+    border: none;
+    font-size: 15px;
+    font-weight: 500;
+    color: abs.$primary-color;
+    caret-color: abs.$primary-color;
+    @include abs.placeholder(abs.$gray2);
+  }
+  @include abs.screenMaxWidth(1279.98px){
+    display: none;
+  }
+}

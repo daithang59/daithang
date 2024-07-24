@@ -1,0 +1,5 @@
+.widget.widget-podcast
+    +widgetHeader('Top 8 Podcast')
+    .top-podcast-images     
+        each image in [{cnt: "../../../images/podcast/_image1.svg"},{cnt: "../../../images/podcast/_image2.svg"},{cnt: "../../../images/podcast/_image3.svg"},{cnt: "../../../images/podcast/_image4.svg"},{cnt: "../../../images/podcast/_image5.svg"},{cnt: "../../../images/podcast/_image6.svg"},{cnt: "../../../images/podcast/_image7.svg"},{cnt: "../../../images/podcast/_image8.svg"}]
+            img(src= image.cnt, alt="")

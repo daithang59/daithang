@@ -1,0 +1,8 @@
+.host 
+    h2.heading.host-heading Popular Hosts 
+    ul.host-list 
+        each user in [{color: "hsla(14, 100%, 82%, 1)", name: "Thomas", image: "../images/host-users/img-host-user1.png 2x"},{color: "hsla(39, 100%, 75%, 1)", name: "Darrell",image: "../images/host-users/img-host-user2.png 2x"},{color: "hsla(248, 57%, 80%, 1)",name: "Arlene",image: "../images/host-users/img-host-user3.png 2x"},{color: "hsla(341, 100%, 85%, 1)",name: "Kristin",image: "../images/host-users/img-host-user4.png 2x"},{color: "hsla(39, 100%, 84%, 1)",name: "Courtney",image: "../images/host-users/img-host-user5.png 2x"},{color: "hsla(341, 100%, 89%, 1)",name: "Cody",image: "../images/host-users/img-host-user6.png 2x"},{color: "hsla(248, 57%, 80%, 1)",name: "Arlene",image: "../images/host-users/img-host-user7.png 2x"}]
+            li.host-item
+                .host-avatar(style= `--color: ${user.color}`)   
+                    img(srcSet= user.image, alt= user.name)
+                span.host-name= user.name 

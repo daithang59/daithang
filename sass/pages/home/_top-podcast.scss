@@ -1,0 +1,14 @@
+.top-podcast{
+    &-images{
+        gap: 12px;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        img{
+            aspect-ratio: 1;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    }
+}

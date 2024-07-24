@@ -1,0 +1,16 @@
+aside.sidebar
+    a.logo(href="/")
+        img(srcSet="./images/logo.svg" alt ="gocastUI")
+    ul.menu 
+        each item in [{text: "Home", icon: "icon-home", href: "/"},{text: "Trending", icon: "icon-chart", href: "/trending.html"},{text: "Explore Topics", icon: "icon-3dcube"},{text: "Profile", icon: "icon-play"},{text: "Subscriptions", icon: "icon-subscriptions"}]
+            +menuItem(item.text, item.icon, item.href)
+    ul.menu 
+        h3.menu-heading Podcasters
+        each item in [{text: "Dashboard", icon: "icon-discovery", href: "#"}, {text: "Episodes", icon: "icon-microphone-2", href: "#"},{text: "Team", icon: "icon-3user", href: "#"}, {text: "Subscribers", icon: "icon-adduser", href: "#"}]
+            +menuItem(item.text, item.icon)
+    ul.menu 
+        h3.menu-heading Community
+        each item in [{text: "Leaderboard", icon: "icon-star", href: "#"}]
+            +menuItem(item.text, item.icon)
+
+                    

@@ -1,0 +1,123 @@
+mixin menuItem(text,icon= '' ,href= "#")
+    li.menu-item
+        a.menu-link(href= href) 
+            span.menu-icon 
+                if icon
+                    case icon   
+                        when 'icon-home'
+                            include ../icons/_icon-home
+                        when 'icon-3dcube'
+                            include ../icons/_icon-3dcube
+                        when 'icon-3user'
+                            include ../icons/_icon-3user
+                        when 'icon-adduser'
+                            include ../icons/_icon-adduser
+                        when 'icon-chart'
+                            include ../icons/_icon-chart
+                        when 'icon-discovery'
+                            include ../icons/_icon-discovery
+                        when 'icon-microphone-2'
+                            include ../icons/_icon-microphone-2
+                        when 'icon-play'
+                            include ../icons/_icon-play
+                        when 'icon-star'
+                            include ../icons/_icon-star
+                        when 'icon-subscriptions'
+                            include ../icons/_icon-subscriptions
+            span.menu-text= text
+
+mixin toggle()
+    label.toggle
+        input(type="checkbox", name="")    
+        .toggle-main
+            .toggle-spinner 
+
+mixin button(icon= false, title = "Play Episode")    
+    button.button.button--primary 
+        if icon 
+            include ../icons/_icon-play-button
+        span= title
+
+mixin feedItem
+    .feed-item  
+        .feed-item-header 
+            .feed-author 
+                .feed-author-avatar 
+                    img(src=".././images/host-users/img-host-user6.png", alt="")
+                    span.feed-author-verify    
+                        include ../icons/_icon-verify
+                .feed-author-content 
+                    .feed-author-header
+                        h4.feed-author-name James Killened
+                        .feed-author-rating 
+                            span rated an episude
+                            include ../icons/_icon-rating-5star
+                    .feed-date 
+                        span Jun 25th
+            span
+                include ../icons/_icon-more
+        .feed-item-main
+            .feed-image 
+                img(src="https://i.pinimg.com/736x/2e/2f/4e/2e2f4e5fc91e611a62eae0b428b7ac93.jpg", alt="anime-art")
+            .feed-item-content 
+                p.feed-item-podcast  Perspective Podcast (Ep. 1)
+                h3.feed-item-heading Philosophy vs Religion vs Science: Yahia Amin and Sadman Sadik
+                .feed-item-share 
+                    include ../icons/_icon-share
+                .feed-item-time 
+                    .feed-item-day 
+                        include ../icons/_icon-time-circle
+                        span 11 dayes ago
+                    .feed-item-long 
+                        include ../icons/_icon-timer
+                        span 45mins 10 Sec
+                p.feed-item-decs Play Philosophy vs Religion vs Science: Perspective Podcast (Ep. 1) | Yahia Amin and Sadman Sadik by PERSPECTIVE with Yahia Amin on desktop and mobile. Play over 265 million tracks for...
+        .feed-item-footer
+            .feed-actions 
+                button
+                    include ../icons/_icon-heart
+                button
+                    include ../icons/_icon-magic-star
+                button
+                    include ../icons/_icon-music-playlist
+            +button(true)
+
+mixin widgetHeader(title = "",url = "#")
+    .widget-header  
+        h3.widget-heading= title
+        a.widget-view-all(href= url) View All
+
+mixin followItem(avt = "../../images/users-follow/_user1.svg", name = "", username = "")
+    .follow
+        .follow-user 
+            .follow-user-avatar     
+                img(src= avt, alt= username)
+            .follow-user-info 
+                h4.follow-user-name= name
+                p.follow-user-username= username            
+        .follow-action 
+            +button(false, "Follow")
+
+mixin listenItem(img = "", name = "", title = "")
+    .listen     
+        .listen-image     
+            img(src= img, alt="")
+        .listen-info
+            .listen-name 
+                p Perspective with&nbsp;
+                    span= name
+            h4.listen-title= title
+            .listen-meta 
+                .listen-icon
+                    include ../icons/_icon-play-2
+                        span 156
+                .listen-icon
+                    include ../icons/_icon-heart
+                        span 78
+
+mixin topicItem(img = "", title = "", podcast = "")
+    .topic 
+        img.topic-image(src= img, alt="")
+        .topic-content 
+            h4.topic-title= title
+            p.topic-podcast= podcast

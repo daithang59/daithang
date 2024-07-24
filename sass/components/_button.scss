@@ -1,0 +1,18 @@
+@use "../abstracts/" as abs;
+.button {
+  --gap: 8px;
+  --fw: 600;
+  --p: 8px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--p);
+  gap: var(--gap);
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: var(--fw);
+  &--primary {
+    color: abs.$gray-neutral1;
+    background-color: abs.$primary-color;
+  }
+}

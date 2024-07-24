@@ -1,0 +1,5 @@
+.widget     
+    +widgetHeader('Topics')
+    .topic-list
+        each item in [{img: '../../images/topics/_image1.svg',title: '👫 Society & Culture', podcast: '761k podcast'},{img: '../../images/topics/_image2.svg',title: '🏫 Educations', podcast: '761k podcast'},{img: '../../images/topics/_image3.svg',title: '🎨 Arts', podcast: '761k podcast'},{img: '../../images/topics/_image4.svg',title: '💸 Business', podcast: '761k podcast'}]
+            +topicItem(item.img, item.title, item.podcast)

@@ -1,0 +1,217 @@
+@use "../../abstracts/" as abs;
+.feed {
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    container-type: inline-size;
+    container-name: feedHeader;
+    margin-bottom: 40px;
+  }
+  &-actions {
+    display: flex;
+    align-items: center;
+    gap: 19px;
+  }
+  &-main {
+    container-type: inline-size;
+    container-name: feedMain;
+  }
+  &-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: abs.$gray1;
+    @include abs.fw("medium");
+    @container feedHeader (max-width: 488px) {
+      p {
+        display: none;
+      }
+    }
+  }
+  &-tab {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid abs.$gray-bg3;
+    &-item {
+      padding: 10px;
+      font-size: 14px;
+      @include abs.fw("medium");
+      line-height: 142.857%;
+      cursor: pointer;
+      color: abs.$gray1;
+    }
+    &-item.is-active {
+      color: abs.$primary-color;
+      border-bottom-color: currentColor;
+      @include abs.fw("semibold");
+    }
+  }
+  &-image {
+    flex: 0 0 152px;
+    overflow: hidden;
+    aspect-ratio: 1;
+    width: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+  &-item {
+    border-radius: 10px;
+    border: 1px solid var(--Natural-2, #f0f3f6);
+    margin-bottom: 30px;
+    & > * {
+      padding: 20px;
+    }
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &-main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      border-top: 1px solid abs.$gray-natural2;
+      border-bottom: 1px solid abs.$gray-natural2;
+      flex-direction: column;
+    }
+    &-share {
+      position: absolute;
+      flex: 0 0 20px;
+      right: 0;
+      top: 0;
+    }
+    &-heading {
+      font-size: 14px;
+      color: abs.$text-black1;
+      margin-top: 6px;
+    }
+    &-desc {
+      font-size: 13px;
+      color: abs.$text-black1;
+      line-height: 146.154%;
+    }
+    &-podcast {
+      font-weight: 400;
+      font-size: 14px;
+      color: abs.$gray2;
+    }
+
+    &-content {
+      position: relative;
+    }
+    &-time {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 10px;
+      margin-top: 12px;
+      margin-bottom: 16px;
+    }
+    &-day,
+    &-long {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      span {
+        font-size: 14px;
+        font-weight: 400;
+        color: abs.$gray2;
+      }
+    }
+    &-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .button {
+        font-size: 14px;
+      }
+    }
+  }
+  &-author {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    &-verify {
+      position: absolute;
+      z-index: 2;
+      bottom: -10%;
+      right: -5%;
+    }
+    &-name {
+      @include abs.fw("medium");
+      font-size: 14px;
+      display: flex;
+    }
+    &-avatar {
+      @include abs.size(48px);
+      flex: 0 0 48px;
+      position: relative;
+      img {
+        @include abs.rounded("rounded-full");
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-color: hsla(341, 100%, 89%, 1);
+      }
+    }
+    &-rating {
+      margin-top: 2px;
+      margin-bottom: 4px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 4px;
+      span {
+        display: inline-block;
+        font-size: 14px;
+        color: abs.$gray2;
+      }
+    }
+  }
+  &-date {
+    font-size: 14px;
+    color: abs.$gray2;
+    font-weight: 400;
+  }
+  @container feedMain (min-width: 500px) {
+    &-item {
+      &-main {
+        flex-direction: row;
+      }
+    }
+    &-author {
+      &-header {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        margin-bottom: 4px;
+      }
+      &-rating {
+        gap: 10px;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.button--primary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  span {
+    --fw: 500;
+    color: abs.$gray-neutral1;
+    line-height: 142.857%;
+  }
+}
