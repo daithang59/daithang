@@ -10,48 +10,55 @@
       flex-shrink: 0;
     }
   }
-  @include abs.screenMaxWidth(1279.98px){
-    @include abs.flexBox(center, flex-end, null,null);
+  &-logo {
+    flex-shrink: 0;
   }
-  &-action{
-    @include abs.screenMaxWidth(1279.98px){
-      display: none;
+  .button-upload {
+    height: 48px;
+    --gap: 6px;
+    --p: 0px 16px;
+  }
+  .profile {
+    display: block;
+    @include abs.size(48px);
+    img {
+      @include abs.rounded("rounded-full");
+      @include abs.imgCover();
+    }
+  }
+  .search {
+    padding: 12px 20px;
+    @include abs.flexBox(center, false, 12px);
+    @include abs.bg(abs.$gray-natural2);
+    @include abs.rounded("rounded-xl");
+    flex: 0 1 360px;
+    &-input {
+      flex: 1;
+      @include abs.bg(transparent);
+      border: none;
+      font-size: 15px;
+      font-weight: 500;
+      color: abs.$primary-color;
+      caret-color: abs.$primary-color;
+      @include abs.placeholder(abs.$gray2);
+    }
+  }
+  @include abs.screenMinWidth(1280px) {
+    .topbar{
+      &-logo{
+        display: none;
+      }
     }
   }
 }
-.button-upload {
-  height: 48px;
-  --gap: 6px;
-  --p: 0px 16px;
-  @include abs.screenMaxWidth(1279.98px){
-    display: none;
-  }
-}
-.profile {
-  display: block;
-  @include abs.size(48px);
-  img {
-    @include abs.rounded("rounded-full");
-    @include abs.imgCover();
-  }
-}
-.search {
-  padding: 12px 20px;
-  @include abs.flexBox(center, false, 12px);
-  @include abs.bg(abs.$gray-natural2);
-  @include abs.rounded("rounded-xl");
-  flex: 0 1 360px;
-  &-input {
-    flex: 1;
-    @include abs.bg(transparent);
-    border: none;
-    font-size: 15px;
-    font-weight: 500;
-    color: abs.$primary-color;
-    caret-color: abs.$primary-color;
-    @include abs.placeholder(abs.$gray2);
-  }
-  @include abs.screenMaxWidth(1279.98px){
-    display: none;
+
+@include abs.screenMaxWidth(1279.98px) {
+  .topbar {
+    padding: 20px 24px;
+    .button-upload,
+    &-action,
+    .search {
+      display: none;
+    }
   }
 }

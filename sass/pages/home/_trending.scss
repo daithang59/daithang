@@ -1,13 +1,11 @@
 @use "../../abstracts/" as abs;
 
 .trending {
-  padding-top: 20px;
-  padding-bottom: 36px;
+  padding: 20px 0 36px;
   container-type: inline-size;
   container-name: trending;
   &-heading {
     --mb: 11px;
-    
   }
   &-banner {
     padding: 20px;
@@ -15,7 +13,6 @@
     background-color: abs.$gray-natural1;
     @include abs.flexBox(flex-start, null, null, null);
     position: relative;
-   
   }
   &-content {
     flex: 0 0 310px;
@@ -51,29 +48,29 @@
     bottom: 0;
   }
   &-vector,
-  &-frame{
+  &-frame {
     position: absolute;
   }
-  &-vector{
+  &-vector {
     right: 11%;
     top: 13%;
   }
-  &-frame{
+  &-frame {
     right: 30%;
     bottom: 0;
   }
-  @include abs.screenMaxWidth(767px){
-    &-frame{
+  @include abs.screenMaxWidth(767px) {
+    &-frame {
       right: 15px;
     }
+    padding: 35px 0 25px;
   }
   @container trending (max-width: 630px) {
-      &-image{
-        display: none;
-      }
-      &-content{
-        flex: 1;
-      }
+    &-image {
+      display: none;
+    }
+    &-content {
+      flex: 1;
+    }
   }
-  
 }

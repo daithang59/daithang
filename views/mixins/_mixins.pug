@@ -38,30 +38,31 @@ mixin button(icon= false, title = "Play Episode")
             include ../icons/_icon-play-button
         span= title
 
-mixin feedItem
+mixin feedItem(avt = "../../images/host-users/img-host-user6.png", name = "James Killened", rated = "rated an episude",icon = true, username = "Jun 25th", thumb = "../../images/feed-img/_img1.svg", toptitle = "Perspective Podcast (Ep. 1)", title = "Philosophy vs Religion vs Science: Yahia Amin and Sadman Sadik", content = "Play Philosophy vs Religion vs Science: Perspective Podcast (Ep. 1) | Yahia Amin and Sadman Sadik by PERSPECTIVE with Yahia Amin on desktop and mobile. Play over 265 million tracks for...")
     .feed-item  
         .feed-item-header 
             .feed-author 
                 .feed-author-avatar 
-                    img(src=".././images/host-users/img-host-user6.png", alt="")
+                    img(src= avt, alt="")
                     span.feed-author-verify    
                         include ../icons/_icon-verify
                 .feed-author-content 
                     .feed-author-header
-                        h4.feed-author-name James Killened
+                        h4.feed-author-name= name
                         .feed-author-rating 
-                            span rated an episude
-                            include ../icons/_icon-rating-5star
+                            span= rated
+                            if icon
+                                include ../icons/_icon-rating-5star
                     .feed-date 
-                        span Jun 25th
+                        span= username
             span
                 include ../icons/_icon-more
         .feed-item-main
             .feed-image 
-                img(src="https://i.pinimg.com/736x/2e/2f/4e/2e2f4e5fc91e611a62eae0b428b7ac93.jpg", alt="anime-art")
+                img(src= thumb, alt="")
             .feed-item-content 
-                p.feed-item-podcast  Perspective Podcast (Ep. 1)
-                h3.feed-item-heading Philosophy vs Religion vs Science: Yahia Amin and Sadman Sadik
+                p.feed-item-podcast= toptitle
+                h3.feed-item-heading= title
                 .feed-item-share 
                     include ../icons/_icon-share
                 .feed-item-time 
@@ -71,7 +72,7 @@ mixin feedItem
                     .feed-item-long 
                         include ../icons/_icon-timer
                         span 45mins 10 Sec
-                p.feed-item-decs Play Philosophy vs Religion vs Science: Perspective Podcast (Ep. 1) | Yahia Amin and Sadman Sadik by PERSPECTIVE with Yahia Amin on desktop and mobile. Play over 265 million tracks for...
+                p.feed-item-decs= content
         .feed-item-footer
             .feed-actions 
                 button
