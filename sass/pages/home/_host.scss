@@ -12,7 +12,7 @@
   &-item {
     --gap: 6px;
     --avatar-size: 44px;
-    @include abs.flexBox(center, null, var(--gap), column);
+    @include abs.flexBox(center, center, var(--gap), column);
     @include abs.screenMinWidth(768px) {
       --gap: 7px;
       --avatar-size: 64px;
@@ -39,25 +39,25 @@
     padding-bottom: 0;
   }
   @container mainContainer (max-width: 420px) {
-    &-heading{
+    &-heading {
       margin-bottom: 12px;
     }
-  &-list {
-    display: grid;
-    padding: 10px 0;  
-    grid-auto-columns: 55px;
-    grid-auto-flow: column;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
-    scroll-snap-stop: always;
-    &::-webkit-scrollbar {
-      display: none;
-      width: 0;
+    &-list {
+      display: grid;
+      padding: 10px 0;
+      grid-auto-columns: 55px;
+      grid-auto-flow: column;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      scroll-snap-stop: always;
+      &::-webkit-scrollbar {
+        display: none;
+        width: 0;
+      }
+      & > * {
+        scroll-snap-align: start;
+      }
     }
-    & > * {
-      scroll-snap-align: start;
-    }
-  }
   }
 }
