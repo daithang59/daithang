@@ -13,8 +13,22 @@
   container-type: inline-size;
   container-name: mainContainer;
 }
-
+.button-discover {
+  width: 40px;
+  height: 40px;
+  border-radius: 100rem;
+  background-color: var(--primary-color);
+  position: fixed;
+  right: 24px;
+  bottom: 80px;
+  z-index: 10;
+  --p: 0;
+  display: none;
+}
 @include screenMaxWidth(1279.98px) {
+  .button-discover {
+    display: flex;
+  }
   .main-container {
     padding: 0 24px;
   }

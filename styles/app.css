@@ -302,7 +302,23 @@ h1, h2, h3, h4, h5, h6 {
   container-name: mainContainer;
 }
 
+.button-discover {
+  width: 40px;
+  height: 40px;
+  border-radius: 100rem;
+  background-color: var(--primary-color);
+  position: fixed;
+  right: 24px;
+  bottom: 80px;
+  z-index: 10;
+  --p: 0;
+  display: none;
+}
+
 @media screen and (max-width: 1279.98px) {
+  .button-discover {
+    display: flex;
+  }
   .main-container {
     padding: 0 24px;
   }
@@ -316,6 +332,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   align-items: center;
   padding: 14px 24px;
+  z-index: 10;
   position: fixed;
   bottom: 0;
   left: 0;
