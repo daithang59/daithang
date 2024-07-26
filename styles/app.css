@@ -152,9 +152,27 @@ body,
     --feed-border: #373a43;
     --toggle-text: #e4e4e4;
     --logo-color: #ffffff;
-    --icon-path: #676A6F;
+    --icon-path: #676a6f;
+    --navigation-bg: #242731;
   }
 }
+html.dark {
+  --bg-body-color: #242731;
+  --sidebar-line: #373a43;
+  --search-bg: #373a43;
+  --menu-text: #ababad;
+  --global-text: #ffffff;
+  --trending-bg: #050f16;
+  --host-name: #e4e4e4;
+  --trending-podcast: #a6a7b2;
+  --trending-author: #ffffff;
+  --feed-border: #373a43;
+  --toggle-text: #e4e4e4;
+  --logo-color: #ffffff;
+  --icon-path: #676a6f;
+  --navigation-bg: #242731;
+}
+
 .button {
   --gap: 8px;
   --fw: 600;
@@ -392,7 +410,7 @@ body,
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: white;
+  background-color: var(--navigation-bg, white);
 }
 .navigation-item {
   display: flex;
