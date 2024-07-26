@@ -11,8 +11,8 @@
   left: 0;
   right: 0;
   background-color: var(--navigation-bg, white);
-  &-item{
-    display:flex;
+  &-item {
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 44px;
@@ -21,9 +21,9 @@
   }
   &-upload {
     border-radius: 100rem;
-    background-color: var(--primary-color); 
+    background-color: var(--primary-color);
   }
-  @include abs.screenMinWidth(1280px){
+  @include abs.screenMinWidth(1280px) {
     display: none;
   }
 }

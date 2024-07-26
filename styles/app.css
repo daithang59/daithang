@@ -347,7 +347,7 @@ html.dark {
   border-radius: 12px;
 }
 .menu-link [fill^="#E5"] {
-  fill: var(--icon-path, #E5EAF1);
+  fill: var(--icon-path, #e5eaf1);
 }
 .menu-link:hover {
   background: linear-gradient(92.29deg, #415ef4 0.33%, #7141ef 28.14%);

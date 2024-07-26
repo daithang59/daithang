@@ -48,8 +48,8 @@
     font-weight: 500;
     padding: 8px 30px 8px 20px;
     border-radius: 12px;
-    [fill ^= "#E5"] {
-      fill: var(--icon-path, #E5EAF1);
+    [fill^="#E5"] {
+      fill: var(--icon-path, #e5eaf1);
     }
     &:hover {
       background: linear-gradient(92.29deg, #415ef4 0.33%, #7141ef 28.14%);
