@@ -2,7 +2,6 @@
 
 .topbar {
   padding: 24px 56px;
-  background-color: white;
   @include abs.flexBox(center, space-between);
   &-right {
     @include abs.flexBox(center, false, 24px);
@@ -12,6 +11,7 @@
   }
   &-logo {
     flex-shrink: 0;
+    color: var(--logo-color, abs.$primary-black);
   }
   .button-upload {
     height: 48px;
@@ -29,7 +29,6 @@
   .search {
     padding: 12px 20px;
     @include abs.flexBox(center, false, 12px);
-    @include abs.bg(abs.$gray-natural2);
     @include abs.rounded("rounded-xl");
     flex: 0 1 360px;
     &-input {

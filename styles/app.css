@@ -57,7 +57,6 @@ ol {
 
 body {
   font-family: "IBM Plex Sans", sans-serif;
-  color: hsl(220, 10%, 12%);
   font-weight: 400;
   font-size: 15px;
   text-rendering: optimizeLegibility;
@@ -74,7 +73,6 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 16px;
   line-height: 150%;
   font-weight: 600;
-  color: hsl(220, 10%, 12%);
   margin-bottom: var(--mb);
 }
 
@@ -97,6 +95,66 @@ h1, h2, h3, h4, h5, h6 {
   color: hsl(235, 7%, 67%);
 }
 
+:root {
+  --bg-body-color: white;
+  --sidebar-line: #e9eef4;
+  --search-bg: #f0f3f6;
+  --menu-text: #8494ab;
+  --global-text: #1b1d21;
+  --trending-bg: #f8f8f8;
+  --host-name: #5f6164;
+}
+
+body {
+  color: var(--global-text);
+}
+
+body,
+.sidebar,
+.topbar {
+  background-color: var(--bg-body-color);
+}
+
+.sidebar {
+  border-right: 1px solid var(--sidebar-line);
+}
+
+.search {
+  background-color: var(--search-bg);
+}
+
+.menu:not(:last-child):after {
+  background-color: var(--sidebar-line);
+}
+.menu-link {
+  color: var(--menu-text);
+}
+
+.trending-banner {
+  background-color: var(--trending-bg);
+}
+
+.host-name {
+  color: var(--host-name);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-body-color: #242731;
+    --sidebar-line: #373a43;
+    --search-bg: #373a43;
+    --menu-text: #ababad;
+    --global-text: #ffffff;
+    --trending-bg: #050f16;
+    --host-name: #e4e4e4;
+    --trending-podcast: #a6a7b2;
+    --trending-author: #ffffff;
+    --feed-border: #373a43;
+    --toggle-text: #e4e4e4;
+    --logo-color: #ffffff;
+    --icon-path: #676A6F;
+  }
+}
 .button {
   --gap: 8px;
   --fw: 600;
@@ -143,7 +201,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .topbar {
   padding: 24px 56px;
-  background-color: white;
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -161,6 +218,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .topbar-logo {
   flex-shrink: 0;
+  color: var(--logo-color, hsl(240, 19%, 17%));
 }
 .topbar .button-upload {
   height: 48px;
@@ -184,7 +242,6 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   flex-direction: row;
   gap: 12px;
-  background-color: hsl(208, 26%, 95%);
   border-radius: 12px;
   flex: 0 1 360px;
 }
@@ -221,12 +278,11 @@ h1, h2, h3, h4, h5, h6 {
 .logo {
   display: block;
   margin-bottom: 44px;
+  color: var(--logo-color, hsl(240, 19%, 17%));
 }
 
 .sidebar {
-  background-color: white;
   padding: 48px 30px;
-  border-right: hsl(208, 26%, 95%) 1px solid;
 }
 @media screen and (max-width: 1279.98px) {
   .sidebar {
@@ -251,7 +307,6 @@ h1, h2, h3, h4, h5, h6 {
   content: "";
   display: block;
   height: 1px;
-  background-color: hsl(213, 33%, 94%);
   margin-block: var(--gap);
 }
 .menu-icon {
@@ -267,12 +322,14 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: hsl(215, 19%, 59%);
   font-size: 14px;
   line-height: 143%;
   font-weight: 500;
   padding: 8px 30px 8px 20px;
   border-radius: 12px;
+}
+.menu-link [fill^="#E5"] {
+  fill: var(--icon-path, #E5EAF1);
 }
 .menu-link:hover {
   background: linear-gradient(92.29deg, #415ef4 0.33%, #7141ef 28.14%);
@@ -290,7 +347,6 @@ h1, h2, h3, h4, h5, h6 {
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;
-  background-color: hsl(0, 100%, 100%);
   display: grid;
   grid-template-columns: 256px minmax(0, 1fr);
   min-height: 100vh;
@@ -306,7 +362,6 @@ h1, h2, h3, h4, h5, h6 {
   width: 40px;
   height: 40px;
   border-radius: 100rem;
-  background-color: var(--primary-color);
   position: fixed;
   right: 24px;
   bottom: 80px;

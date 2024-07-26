@@ -3,11 +3,10 @@
 .logo {
   display: block;
   margin-bottom: 44px;
+  color: var(--logo-color, abs.$primary-black);
 }
 .sidebar {
-  @include abs.bg(white);
   padding: 48px 30px;
-  border-right: abs.$gray-natural2 1px solid;
   @include abs.screenMaxWidth(1279.98px) {
     position: fixed;
     top: 0;
@@ -29,7 +28,6 @@
     content: "";
     display: block;
     height: 1px;
-    background-color: abs.$graye9;
     margin-block: var(--gap);
   }
   &-icon {
@@ -45,12 +43,14 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    color: abs.$text-gray;
     font-size: 14px;
     line-height: 143%;
     font-weight: 500;
     padding: 8px 30px 8px 20px;
     border-radius: 12px;
+    [fill ^= "#E5"] {
+      fill: var(--icon-path, #E5EAF1);
+    }
     &:hover {
       background: linear-gradient(92.29deg, #415ef4 0.33%, #7141ef 28.14%);
       color: hsl(0, 0%, 100%);

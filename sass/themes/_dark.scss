@@ -1,0 +1,59 @@
+:root {
+  --bg-body-color: white;
+  --sidebar-line: #e9eef4;
+  --search-bg: #f0f3f6;
+  --menu-text: #8494ab;
+  --global-text: #1b1d21;
+  --trending-bg: #f8f8f8;
+  --host-name: #5f6164;
+}
+body {
+  color: var(--global-text);
+}
+body,
+.sidebar,
+.topbar {
+  background-color: var(--bg-body-color);
+}
+.sidebar {
+  border-right: 1px solid var(--sidebar-line);
+}
+.search {
+  background-color: var(--search-bg);
+}
+.menu {
+  &:not(:last-child):after {
+    background-color: var(--sidebar-line);
+  }
+  &-link {
+    color: var(--menu-text);
+  }
+}
+.trending {
+  &-banner {
+    background-color: var(--trending-bg);
+  }
+}
+.host {
+  &-name {
+    color: var(--host-name);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-body-color: #242731;
+    --sidebar-line: #373a43;
+    --search-bg: #373a43;
+    --menu-text: #ababad;
+    --global-text: #ffffff;
+    --trending-bg: #050f16;
+    --host-name: #e4e4e4;
+    --trending-podcast: #a6a7b2;
+    --trending-author: #ffffff;
+    --feed-border: #373a43;
+    --toggle-text: #e4e4e4;
+    --logo-color: #ffffff;
+    --icon-path: #676A6F;
+  }
+}

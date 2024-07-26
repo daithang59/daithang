@@ -5,7 +5,6 @@
     font-size: 16px;
     line-height: 150%;
     @include abs.fw("semibold");
-    color: abs.$text-black1;
     margin-bottom: var(--mb);
 }
 .widget{
