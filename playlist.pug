@@ -4,6 +4,15 @@ append stylesheet
 block title 
     title GoCastUI - Playlist
 block main
-    .playlist   
-        each val in [{img: "../images/playlist/_image1.svg", title: "UIHUT Podcast", desc: "UIHUT is a design and coding resources platform for designers, developers, and entrepreneurs."},{img: "../images/playlist/_image2.svg", title: "Developer Podcast", desc: "The Best Tech Podcasts for Software Developers in 2021."},{img: "../images/playlist/_image3.svg", title: "Learning Podcast", desc: "The 30 best educational podcasts for learning what you missed in school."},{img: "../images/playlist/_image4.svg", title: "Health & Fitness", desc: "UIHUT is a design and coding resources platform for designers, developers, and entrepreneurs."},{img: "../images/playlist/_image5.svg", title: "Sports", desc: "Also, it helps us to learn many new things in life. It assists us in building confidence, develops."},{img: "../images/playlist/_image6.svg", title: "Motivational Speech", desc: "A motivational speech is a public speech intended to inspire an audience to make a change in their lives."},{img: "../images/playlist/_image7.svg", title: "Business Development", desc: "UIHUT is a design and coding resources platform for designers, developers, and entrepreneurs."},{img: "../images/playlist/_image8.svg", title: "UIHUT Podcast", desc: "UIHUT is a design and coding resources platform for designers, developers, and entrepreneurs."},]
-            +playlistItem(val.img, val.title, val.desc)
+    .playlist
+        .playlist-header 
+            .playlist-header-left 
+                h1.playlist-heading Playlist
+                p.playlist-heading-desc Hear your own playlists and the playlists you’ve liked
+            .playlist-header-right
+                button.playlist-header-btn 
+                    span.playlist-header-btn-text All 
+                    include ./views/icons/_icon-cheveron
+        .playlist-main
+            each val in [{img: "../images/playlist/_image1.svg", title: "UIHUT Podcast", desc: "UIHUT is a design and coding resources platform for designers, developers, and entrepreneurs."},{img: "../images/playlist/_image2.svg", title: "Developer Podcast", desc: "The Best Tech Podcasts for Software Developers in 2021."},{img: "../images/playlist/_image3.svg", title: "Learning Podcast", desc: "The 30 best educational podcasts for learning what you missed in school."},{img: "../images/playlist/_image4.svg", title: "Health & Fitness", desc: "UIHUT is a design and coding resources platform for designers, developers, and entrepreneurs."},{img: "../images/playlist/_image5.svg", title: "Sports", desc: "Also, it helps us to learn many new things in life. It assists us in building confidence, develops."},{img: "../images/playlist/_image6.svg", title: "Motivational Speech", desc: "A motivational speech is a public speech intended to inspire an audience to make a change in their lives."},{img: "../images/playlist/_image7.svg", title: "Business Development", desc: "UIHUT is a design and coding resources platform for designers, developers, and entrepreneurs."},{img: "../images/playlist/_image8.svg", title: "UIHUT Podcast", desc: "UIHUT is a design and coding resources platform for designers, developers, and entrepreneurs."},]
+                +playlistItem(val.img, val.title, val.desc)

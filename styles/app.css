@@ -158,10 +158,12 @@ body,
     --playlist-shadow: -1px -3px 14px 0px rgba(15, 20, 39, 0.2),
       -10px 24px 35px 0px rgba(8, 8, 9, 0.25);
     --playlist-title: white;
-    --playlist-date: #A6A7B2;
-    --playlist-desc: #A6A7B2;
+    --playlist-date: #a6a7b2;
+    --playlist-desc: #a6a7b2;
     --playlist-episode-border: #242731;
-    --playlist-episode-number: #373A43;
+    --playlist-episode-number: #373a43;
+    --playlist-header: white;
+    --playlist-btn: #373a43;
   }
 }
 html.dark {
