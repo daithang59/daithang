@@ -116,9 +116,27 @@ mixin listenItem(img = "", name = "", title = "")
                     include ../icons/_icon-heart
                         span 78
 
-mixin topicItem(img = "", title = "", podcast = "")
+mixin topicItem(img = "", title = "", podcast = "") 
     .topic 
         img.topic-image(src= img, alt="")
         .topic-content 
             h4.topic-title= title
             p.topic-podcast= podcast
+
+mixin playlistItem(img = "../images/playlist/_image1.svg", title = "UIHUT Podcast", desc = "UIHUT is a design and coding resources platform for designers, developers, and entrepreneurs.")
+    .playlist-item 
+        .playlist-image
+            img(src= img, alt="")
+        .playlist-content 
+            .playlist-top 
+                h3.playlist-title= title
+                span.playlist-date Created on 1 day ago
+            .playlist-desc= desc
+            .playlist-bottom
+                .playlist-episodes
+                    each item in ["../../images/playlist-icon/_img1.svg","../../images/playlist-icon/_img2.svg","../../images/playlist-icon/_img3.svg","../../images/playlist-icon/_img4.svg"]
+                        img.playlist-episode-image.playlist-episode-item(src= item, alt="")
+                    .playlist-episode-number.playlist-episode-item 41+
+                .playlist-likes
+                    include ../icons/_icon-heart-fill
+                    span.playlist-likes-count 1.5k
