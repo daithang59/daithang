@@ -2,15 +2,15 @@ aside.sidebar
     a.logo(href="/")
         include ../icons/_logo
     ul.menu 
-        each item in [{text: "Home", icon: "icon-home", href: "/"},{text: "Trending", icon: "icon-chart", href: "/trending.html"},{text: "Explore Topics", icon: "icon-3dcube"},{text: "Playlist", icon: "icon-play", href: "/playlist.html"},{text: "Subscriptions", icon: "icon-subscriptions"}]
+        each item in [{text: "Home", icon: "icon-home", href: "/"},{text: "Trending", icon: "icon-chart", href: "/trending.html"},{text: "Explore Topics", icon: "icon-3dcube", href: "/explore.html"},{text: "Playlist", icon: "icon-play", href: "/playlist.html"},{text: "Subscriptions", icon: "icon-subscriptions", href: "/subscriptions.html"}]
             +menuItem(item.text, item.icon, item.href)
     ul.menu 
         h3.menu-heading Podcasters
-        each item in [{text: "Dashboard", icon: "icon-discovery", href: "#"}, {text: "Episodes", icon: "icon-microphone-2", href: "#"},{text: "Team", icon: "icon-3user", href: "#"}, {text: "Subscribers", icon: "icon-adduser", href: "#"}]
-            +menuItem(item.text, item.icon)
+        each item in [{text: "Dashboard", icon: "icon-discovery", href: "/dashboard.html"}, {text: "Episodes", icon: "icon-microphone-2", href: "/episodes.html"},{text: "Team", icon: "icon-3user", href: "/team.html"}, {text: "Subscribers", icon: "icon-adduser", href: "/subscribers.html"}]
+            +menuItem(item.text, item.icon, item.href)
     ul.menu 
         h3.menu-heading Community
-        each item in [{text: "Leaderboard", icon: "icon-star", href: "#"}]
-            +menuItem(item.text, item.icon)
+        each item in [{text: "Leaderboard", icon: "icon-star", href: "/leaderboard.html"}]
+            +menuItem(item.text, item.icon, item.href)
 
                     
