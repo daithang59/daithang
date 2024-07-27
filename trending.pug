@@ -4,4 +4,9 @@ append stylesheet
 block title 
     title GoCastUI - Trending
 block main
-    p Trending page
+    .trending-header 
+        h1.trending-header-title Trending Podcast 
+        .trending-thumbnail 
+            +thumbnailItem
+        .trending-dot 
+            img(src= "./images/trending/_img-dot.svg", alt="dot")

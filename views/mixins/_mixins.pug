@@ -140,3 +140,18 @@ mixin playlistItem(img = "../images/playlist/_image1.svg", title = "UIHUT Podcas
                 .playlist-likes
                     include ../icons/_icon-heart-fill
                     span.playlist-likes-count 1.5k
+
+mixin thumbnailItem
+    .thumbnail-item 
+        .thumbnail-item-block
+            img(src= "../../images/trending/_img-block.svg", alt="block")
+        .thumbnail-item-content 
+            h2.thumbnail-item-title Don't Always Win | LifeSpring
+            span.thumbnail-item-desc Podcast Episode - 1
+            span.thumbnail-item-author-name Yahia Md Amin (Chairman - LifeSpring Limited )
+            button.button-thumbnail 
+                include ../icons/_icon-play-button
+                span Play Now
+        .thumbnail-item-image 
+            img(src= "../../images/trending/_img1.svg", alt="microphone")
+        
