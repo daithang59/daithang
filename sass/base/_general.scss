@@ -1,27 +1,66 @@
 @use "../abstracts/" as abs;
 
-.heading{
-    --mb: 0;
-    font-size: 16px;
-    line-height: 150%;
-    @include abs.fw("semibold");
-    margin-bottom: var(--mb);
+.heading {
+  --mb: 0;
+  font-size: 16px;
+  line-height: 150%;
+  @include abs.fw("semibold");
+  margin-bottom: var(--mb);
 }
-.widget{
-    margin-bottom: 40px;
-    &-header{
-        display:flex;
+.widget {
+  margin-bottom: 40px;
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  &-heading {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+  }
+  &-view-all {
+    font-size: 13px;
+    color: abs.$gray2;
+  }
+}
+.normal {
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      &-btn {
+        display: flex;
+        width: 173px;
+        padding: 10px 23px;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 20px;
+        border-radius: 16px;
+        background: var(--playlist-btn, #f8f8f8);
+        &-text {
+          color: #a6a7b2;
+  
+          /* B-11 */
+          font-size: 15px;
+          font-weight: 500;
+          line-height: 146.667%;
+        }
+      }
     }
-    &-heading{
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 150%;
-    }
-    &-view-all{
-        font-size: 13px;
-        color: abs.$gray2;
+    &-heading {
+      color: var(--playlist-header, #1b1d21);
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 108.333%;
+      margin-bottom: 14px;
+      &-desc {
+        color: #a6a7b2;
+        /* B-15 */
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 142.857%;
+      }
     }
 }

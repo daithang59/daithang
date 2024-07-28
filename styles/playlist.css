@@ -9,42 +9,6 @@
   }
 }
 
-.playlist-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-.playlist-header-btn {
-  display: flex;
-  width: 173px;
-  padding: 10px 23px;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 16px;
-  background: var(--playlist-btn, #f8f8f8);
-}
-.playlist-header-btn-text {
-  color: #a6a7b2;
-  /* B-11 */
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 146.667%;
-}
-.playlist-heading {
-  color: var(--playlist-header, #1b1d21);
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 108.333%;
-  margin-bottom: 14px;
-}
-.playlist-heading-desc {
-  color: #a6a7b2;
-  /* B-15 */
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 142.857%;
-}
 .playlist-item {
   border-radius: 10px;
   background: var(--playlist-bg, #fff);

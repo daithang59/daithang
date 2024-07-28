@@ -95,6 +95,43 @@ h1, h2, h3, h4, h5, h6 {
   color: hsl(235, 7%, 67%);
 }
 
+.normal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.normal-header-btn {
+  display: flex;
+  width: 173px;
+  padding: 10px 23px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 16px;
+  background: var(--playlist-btn, #f8f8f8);
+}
+.normal-header-btn-text {
+  color: #a6a7b2;
+  /* B-11 */
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+.normal-heading {
+  color: var(--playlist-header, #1b1d21);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 108.333%;
+  margin-bottom: 14px;
+}
+.normal-heading-desc {
+  color: #a6a7b2;
+  /* B-15 */
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 142.857%;
+}
+
 :root {
   --bg-body-color: white;
   --sidebar-line: #e9eef4;
@@ -164,6 +201,7 @@ body,
     --playlist-episode-number: #373a43;
     --playlist-header: white;
     --playlist-btn: #373a43;
+    --trending-button-none: #373a43;
   }
 }
 html.dark {
@@ -200,6 +238,22 @@ html.dark {
 .button--primary {
   color: hsl(0, 0%, 99%);
   background-color: hsl(248, 57%, 60%);
+}
+
+.trending--button {
+  display: flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border-radius: 8px;
+  background-color: var(--trending-button-none, #f0f3f6);
+}
+.trending--button span {
+  color: var(--playlist-desc, #1b1d21);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 146.667%;
 }
 
 .toggle-main {

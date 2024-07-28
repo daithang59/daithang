@@ -155,3 +155,17 @@ mixin thumbnailItem
         .thumbnail-item-image 
             img(src= "../../images/trending/_img1.svg", alt="microphone")
         
+
+mixin buttonNone(text)
+    button.trending--button.button-none
+        span= text
+
+mixin HeaderItem(title= "", desc= "", text= "")
+    .normal-header
+        .normal-header-left 
+            h1.normal-heading= title
+            p.normal-heading-desc= desc
+        .normal-header-right
+            button.normal-header-btn 
+                span.normal-header-btn-text= text
+                include ../icons/_icon-cheveron

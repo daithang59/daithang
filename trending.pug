@@ -4,9 +4,18 @@ append stylesheet
 block title 
     title GoCastUI - Trending
 block main
-    .trending-header 
-        h1.trending-header-title Trending Podcast 
-        .trending-thumbnail 
-            +thumbnailItem
-        .trending-dot 
-            img(src= "./images/trending/_img-dot.svg", alt="dot")
+    .trendingpage
+        .trendingpage-header 
+            h1.trendingpage-header-title Trending Podcast 
+            .trendingpage-thumbnail 
+                +thumbnailItem
+            .trendingpage-dot 
+                img(src= "./images/trending/_img-dot.svg", alt="dot")
+            .trendingpage-button-list 
+                +buttonNone("All")
+                +buttonNone("Shows")
+                button.button.button--primary.button-trendingpage 
+                    span Episodes
+        .trendingpage-main 
+            .trendingpage-main-header
+                +HeaderItem("Trending Episodes", "The Most Popular Podcast episodes overall now. Last updated 2 hours ago", "Last 1 Weeks")
