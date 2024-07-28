@@ -202,6 +202,10 @@ body,
     --playlist-header: white;
     --playlist-btn: #373a43;
     --trending-button-none: #373a43;
+    --text-active: white;
+    --trendingpage-item-bs: -1px -3px 14px 0px rgba(15, 20, 39, 0.2),
+      -10px 24px 35px 0px rgba(8, 8, 9, 0.25);
+    --button-footer-bs: 0px 3px 4px 0px rgba(0, 0, 0, 0.25);
   }
 }
 html.dark {
@@ -220,6 +224,22 @@ html.dark {
   --icon-path: #676a6f;
   --navigation-bg: #242731;
   --playlist-bg: #242731;
+  --playlist-shadow: -1px -3px 14px 0px rgba(15, 20, 39, 0.2),
+    -10px 24px 35px 0px rgba(8, 8, 9, 0.25);
+  --playlist-title: white;
+  --playlist-date: #a6a7b2;
+  --playlist-desc: #a6a7b2;
+  --playlist-episode-border: #242731;
+  --playlist-episode-number: #373a43;
+  --playlist-header: white;
+  --playlist-btn: #373a43;
+  --trending-button-none: #373a43;
+  --text-active: white;
+  --trendingpage-item-bs: -1px -3px 14px 0px rgba(15, 20, 39, 0.2),
+    -10px 24px 35px 0px rgba(8, 8, 9, 0.25);
+  --button-footer-bs: 0px 3px 4px 0px rgba(0, 0, 0, 0.25);
+  --bg-3: #373A43;
+  --white: white;
 }
 
 .button {
