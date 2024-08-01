@@ -1,0 +1,211 @@
+@use "../../abstracts/" as abs;
+
+.subscriptionspage {
+  &-title {
+    color: var(--global-text, white);
+
+    /* H-6 */
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 109.091%;
+    margin-bottom: 20px;
+  }
+  &-header {
+    margin-bottom: 50px;
+  }
+  &-author {
+    &-list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 37px;
+      padding: 10px;
+    }
+    &-item {
+      padding: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      flex-direction: column;
+      border-radius: 10px;
+      background: var(--bg-body-color, white);
+
+      /* Dark */
+      box-shadow:var(--playlist-shadow,-1px -3px 14px 0px rgba(227, 230, 236, 0.20), -10px 24px 35px 0px rgba(227, 230, 236, 0.25));
+
+    }
+    &-avatar {
+      flex: 0 0 122px;
+      border-radius: 100rem;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 100rem;
+      }
+    }
+    &-name {
+      color: var(--global-text, #fff);
+
+      /* H-7 */
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 1.5;
+      white-space: nowrap;
+    }
+    &-username {
+      color: var(--Gray--2, #a6a7b2);
+
+      /* B-11 */
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 146.667%;
+      white-space: nowrap;
+    }
+  }
+}
+
+.subscriptionspage {
+  &-item {
+    border-radius: 10px;
+    border: 1px solid var(--feed-border, abs.$gray-natural2);
+    &-actions {
+      display: flex;
+      gap: 16px;
+    }
+    & > * {
+      padding: 20px;
+    }
+    &-image {
+      flex: 0 0 152px;
+      overflow: hidden;
+      aspect-ratio: 1;
+      width: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+    }
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 32px;
+    }
+    &-main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      border-bottom: 1px solid var(--feed-border, abs.$gray-natural2);
+    }
+    &-share {
+      position: absolute;
+      flex: 0 0 20px;
+      right: 0;
+      top: 0;
+    }
+    &-heading {
+      font-size: 14px;
+      font-weight: 500;
+      margin-top: 6px;
+    }
+    &-desc {
+      font-size: 13px;
+      color: abs.$text-black1;
+      line-height: 146.154%;
+    }
+    &-podcast {
+      font-weight: 400;
+      font-size: 14px;
+      color: abs.$gray2;
+    }
+    &-content {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      position: relative;
+      padding-right: 10px;
+    }
+    &-time {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 10px;
+      margin-top: 9px;
+      margin-bottom: 10px;
+    }
+    &-day,
+    &-long {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      span {
+        font-size: 14px;
+        font-weight: 400;
+        color: abs.$gray2;
+      }
+    }
+    &-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .button {
+        font-size: 14px;
+      }
+    }
+  }
+
+  @container mainContainer (max-width: 1040px) {
+    // &-heading {
+    //   margin-bottom: 12px;
+    // }
+    &-author {
+      &-list {
+        display: grid;
+        //   padding: 10px 0;
+        //   grid-auto-columns: px;
+        grid-auto-flow: column;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        scroll-snap-stop: always;
+        &::-webkit-scrollbar {
+          display: none;
+          width: 0;
+        }
+        & > * {
+          scroll-snap-align: start;
+        }
+      }
+    }
+  }
+  @include abs.screenMaxWidth(1000px) {
+    &-item {
+      &-main {
+        flex-direction: column;
+      }
+    }
+    &-author {
+      &-name {
+        font-size: 18px;
+        line-height: 144.444%;
+      }
+      &-username {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 142.857%;
+      }
+    }
+  }
+  @container mainContainer (max-width: 670px) {
+    &-item {
+      &-list {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+      }
+    }
+  }
+}

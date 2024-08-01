@@ -4,4 +4,9 @@ append stylesheet
 block title 
     title GoCastUI - Subscriptions
 block main
-    p Subscriptions Page
+     .subscriptionspage
+        .subscriptionspage-header
+            include ./views/modules/subscriptions/_header
+        .subscriptionspage-main 
+            include ./views/modules/subscriptions/_main
+        //- .subscriptions-footer

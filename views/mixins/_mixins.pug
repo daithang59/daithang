@@ -211,3 +211,39 @@ mixin PageTopicItem(img = "", title = "", podcast = "")
         .topicspage-content 
             h4.topicspage-title= title
             p.topicspage-podcast= podcast
+
+mixin SubsAuthorItem(img = "", name = "", username = "")
+    .subscriptionspage-author-item
+        .subscriptionspage-author-avatar 
+            img(src= img, alt="")
+        h3.subscriptionspage-author-name= name
+        .subscriptionspage-author-username 
+            span= username
+
+mixin SubsPageItem(thumb = "", toptitle = "", title = "", content = "")
+    .subscriptionspage-item
+        .subscriptionspage-item-main
+            .subscriptionspage-item-image 
+                img(src= thumb, alt="")
+            .subscriptionspage-item-content 
+                p.subscriptionspage-item-podcast= toptitle
+                h3.subscriptionspage-item-heading= title
+                a.subscriptionspage-item-share(href="https://www.facebook.com/hldaithangg/")
+                    include ../icons/_icon-share
+                .subscriptionspage-item-time 
+                    .subscriptionspage-item-day 
+                        include ../icons/_icon-time-circle
+                        span 11 dayes ago
+                    .subscriptionspage-item-long 
+                        include ../icons/_icon-timer
+                        span 45mins 10 Sec
+                p.subscriptionspage-item-decs= content
+        .subscriptionspage-item-footer
+            .subscriptionspage-item-actions 
+                button
+                    include ../icons/_icon-heart
+                button
+                    include ../icons/_icon-magic-star
+                button
+                    include ../icons/_icon-music-playlist
+            +button(true)
