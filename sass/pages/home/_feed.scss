@@ -76,7 +76,7 @@
     &-main {
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       gap: 20px;
       border-top: 1px solid var(--feed-border , abs.$gray-natural2);
       border-bottom: 1px solid var(--feed-border  , abs.$gray-natural2);
@@ -102,6 +102,7 @@
       font-weight: 400;
       font-size: 14px;
       color: abs.$gray2;
+      margin-bottom: 10px;
     }
 
     &-content {

@@ -235,7 +235,7 @@
 .feed-item-main {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 20px;
   border-top: 1px solid var(--feed-border, hsl(208, 26%, 95%));
   border-bottom: 1px solid var(--feed-border, hsl(208, 26%, 95%));
@@ -261,6 +261,7 @@
   font-weight: 400;
   font-size: 14px;
   color: hsl(235, 7%, 67%);
+  margin-bottom: 10px;
 }
 .feed-item-content {
   position: relative;
