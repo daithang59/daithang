@@ -1,3 +1,63 @@
+:root {
+  --primary-h: 248;
+  --primary-s: 57%;
+  --primary-l: 60%;
+  --primary-color: hsla(248, 57%, 60%, 1);
+}
 
+.topicspage-item {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.topicspage-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-gap: 36px;
+}
+.topicspage-image {
+  width: 100%;
+  height: 86px;
+  object-fit: cover;
+  border-radius: inherit;
+}
+.topicspage-content {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background-color: hsla(220, 10%, 12%, 0.65);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 10px;
+}
+.topicspage-title {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 146.667%;
+}
+.topicspage-podcast {
+  font-size: 13px;
+  line-height: 146.154%;
+}
+@media screen and (min-width: 768px) {
+  .topicspage-main {
+    padding-top: 18px;
+  }
+}
+@media screen and (max-width: 880px) {
+  .topicspage-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 20px;
+  }
+}
+@media screen and (max-width: 468px) {
+  .topicspage-list {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-gap: 20px;
+  }
+}
 
 /*# sourceMappingURL=explore.css.map */

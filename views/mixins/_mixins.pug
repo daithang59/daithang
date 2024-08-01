@@ -160,15 +160,16 @@ mixin buttonNone(text)
     button.trending--button.button-none
         span= text
 
-mixin HeaderItem(title= "", desc= "", text= "")
+mixin HeaderItem(title= "", desc= "", text= "", btn= true)
     .normal-header
         .normal-header-left 
             h1.normal-heading= title
             p.normal-heading-desc= desc
         .normal-header-right
-            button.normal-header-btn 
-                span.normal-header-btn-text= text
-                include ../icons/_icon-cheveron
+            if btn
+                button.normal-header-btn 
+                    span.normal-header-btn-text= text
+                    include ../icons/_icon-cheveron
 
 mixin TrendingPageItem(url = "", title = "", desc = "", avt = "", name = "", username = "", trackicon = "", trackinfo = "")
     .trendingpage-item 
@@ -203,3 +204,10 @@ mixin TrendingPageItem(url = "", title = "", desc = "", avt = "", name = "", use
                 img(src="../../images/trendingpage-item/_icon-heart.svg", alt="")
         a.trendingpage-item-more(href="https://www.facebook.com/hldaithangg/")
             include ../icons/_icon-more
+
+mixin PageTopicItem(img = "", title = "", podcast = "") 
+    .topicspage-item
+        img.topicspage-image(src= img, alt="")
+        .topicspage-content 
+            h4.topicspage-title= title
+            p.topicspage-podcast= podcast
